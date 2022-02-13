@@ -17,4 +17,4 @@ print(results)
 #Open new CSV file with write permission
 with open('converted2.csv','w') as new_file:
     write=csv.writer(new_file)
-    write.writerow(results) #write results in csv column
+    write.writerows(map(lambda x: [x], results)) #write results in csv column
